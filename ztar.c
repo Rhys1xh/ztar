@@ -1,6 +1,7 @@
 // ztar.c - Secure Compressed Archive System (Release v1.7)
 // Build: make
 // Dependencies: libsodium-dev liblz4-dev zlib1g-dev
+// BSL-1.0
 // Production Ready
 
 #define _GNU_SOURCE
