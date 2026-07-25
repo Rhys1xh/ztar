@@ -1,4 +1,4 @@
-# Makefile for ZTAR - Secure Compressed Archive System v6.2
+# Makefile for ZTAR - Secure Compressed Archive System v1.6.2
 # Just type: make
 
 .PHONY: all clean install uninstall test stress-test parallel-test help debug
@@ -35,7 +35,7 @@ all: $(TARGET)
 	@printf "$(YELLOW)Run './$(TARGET) --help' for usage, or 'make test' to verify$(NC)\n"
 
 $(TARGET): $(SOURCES)
-	@printf "$(YELLOW)Building $(TARGET) v6.2...$(NC)\n"
+	@printf "$(YELLOW)Building $(TARGET) v1.6.2...$(NC)\n"
 	$(CC) $(CFLAGS) -o $@ $< $(LIBS)
 	@printf "$(GREEN)✓ Compilation successful (0 warnings)$(NC)\n"
 
@@ -56,7 +56,7 @@ uninstall:
 	@printf "$(GREEN)✓ Uninstalled$(NC)\n"
 
 test: $(TARGET)
-	@printf "\n$(BOLD)=== ZTAR v6.2 Test Suite ===$(NC)\n\n"
+	@printf "\n$(BOLD)=== ZTAR v1.6.2 Test Suite ===$(NC)\n\n"
 	@# Test 1: Create
 	@printf "$(GREEN)[1/7] Creating archive...$(NC)\n"
 	@./$(TARGET) create test.ztar -p "TestPass123!" -q
@@ -145,7 +145,7 @@ clean:
 	@printf "$(GREEN)✓ Clean$(NC)\n"
 
 help:
-	@printf "\n$(BOLD)ZTAR v6.2 - Secure Compressed Archive System$(NC)\n\n"
+	@printf "\n$(BOLD)ZTAR v1.6.2 - Secure Compressed Archive System$(NC)\n\n"
 	@printf "$(GREEN)Build Targets:$(NC)\n"
 	@printf "  $(YELLOW)make$(NC)              Build production binary\n"
 	@printf "  $(YELLOW)make debug$(NC)         Build with debug symbols + AddressSanitizer\n"
